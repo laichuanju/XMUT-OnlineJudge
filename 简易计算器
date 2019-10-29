@@ -1,0 +1,51 @@
+#include<stdio.h>
+
+int main()
+{
+	int num1,num2;
+	float result;
+	char what;
+	scanf("%d%c%d",&num1,&what,&num2);
+	if(what=='+')
+	{
+		result=num1+num2;
+		printf("%d%c%d=%d",num1,what,num2,(int)result);
+	}
+	else
+	{
+		if(what=='-')
+		{
+			result=num1-num2;
+			printf("%d%c%d=%d",num1,what,num2,(int)result);
+		}
+		else
+		{
+			if(what=='x')
+			{
+				result=num1*num2;
+				printf("%dx%d=%d",num1,num2,(int)result);
+			}
+			else
+			{
+				if(what=='/'&&num2!=0)
+				{
+				  result=(float)num1/(float)num2;
+				  printf("%d%c%d=%.2f",num1,what,num2,result);
+				}
+				else
+				{
+					if(what=='/'&&num2==0)
+					{
+					  printf("divide by 0!");
+					}
+					else
+					{
+						printf("error input!");
+					}
+				}
+
+			}
+		}
+	}
+return 0;
+}
