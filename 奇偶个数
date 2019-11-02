@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+    int num,a,odd=0,even=0;
+    scanf("%d",&num);
+    if(num<0)
+    num=-num;
+    do 
+    {
+        a=num%10;
+        if(num<10)
+        {
+            a=num;
+            if(a%2==0) {even++;}
+            else       {odd++;}
+            printf("%d,%d",odd,even);
+            return 0;
+        }
+        else
+        {
+			if(a%2==0) {even++;}
+			else       {odd++;}
+        }
+        num=num/10;
+    }
+    while(a>=0);
+    printf("%d,%d",odd,even);
+    return 0;
+}
