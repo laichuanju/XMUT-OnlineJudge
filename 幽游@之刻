@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+	int id,N,id2=0;
+	double attack,defence,attack2=0,defence2=0;
+	char sex,sex2=0;
+	scanf("%d",&N);
+	do
+	{
+		scanf("%d,%lf,%lf,%c",&id,&attack,&defence,&sex);
+		if((sex=='M' && attack>attack2)||(sex=='M' && attack==attack2 && defence>defence2))
+		{
+			id2=id;
+			attack2=attack;
+			defence2=defence;
+			sex2=sex;
+		}
+		N--;
+	}while(N>0);
+	printf("%d",id2);
+	return 0;
+}
