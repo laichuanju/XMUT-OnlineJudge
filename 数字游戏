@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+int main()
+{
+	int a,b,c,d,t,i;//定义连续的4个数abcd，t为中间值用于交换两数，i为计数用
+	scanf("%d",&a);
+	b=a+1;//连续的四位数的第二位
+	c=a+2;//连续的四位数的第三位
+	d=a+3;//连续的四位数的第四位
+	for(i=1;i<=4;i++)
+	{
+		printf("%d%d%d ",a,b,c);
+		printf("%d%d%d ",a,b,d);
+		printf("%d%d%d ",a,c,b);
+		printf("%d%d%d ",a,c,d);
+		printf("%d%d%d ",a,d,b);
+		printf("%d%d%d \n",a,d,c);
+		if(i==1)//输出完第一行后输出第二行时将a，b值互换
+		{
+			t=a;
+			a=b;
+			b=t;
+		}
+		else if(i==2)//输出第三行时将此时a，c值互换
+		{
+			t=a;
+			a=c;
+			c=t;
+		}
+		else if(i==3)//输出第四行时将此时a，c值互换
+		{
+			t=a;
+			a=d;
+			d=t;
+		}
+	}
+	return 0;
+}
