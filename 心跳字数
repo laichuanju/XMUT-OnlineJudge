@@ -1,0 +1,22 @@
+#include<stdio.h>
+#define num 108000
+
+int main()
+{
+	int yearX,yearY,i,day=0,total;
+	scanf("%d,%d",&yearX,&yearY);
+	for(i=yearX;i<yearY;i++)
+	{
+		if((i%4==0 && i%100!=0)||(i%400==0))
+		{
+			day+=366;
+		}
+		else
+		{
+			day+=365;
+		}
+		(long)total=day*num;
+	}
+	printf("%ld",total);
+	return 0;
+}
